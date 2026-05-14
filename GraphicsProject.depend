@@ -803,10 +803,69 @@
 
 1677889778 c:\users\kadarkuti\documents\1etem\felev2\bevprog2\beadando3\amoba\graphicslib\keytbl.h
 
-1778437006 source:c:\users\kadarkuti\documents\1etem\felev2\bevprog2\beadando3\amoba\main.cpp
-	"graphics.hpp"
+1778793369 source:c:\users\kadarkuti\documents\1etem\felev2\bevprog2\beadando3\amoba\main.cpp
+	"application.hpp"
+	"gamemaster.hpp"
 
 1677889778 c:\users\kadarkuti\documents\1etem\felev2\bevprog2\beadando3\amoba\include\graphics.hpp
 	<string>
 	<vector>
+
+1778793645 source:c:\users\kadarkuti\documents\1etem\felev2\bevprog2\beadando3\amoba\src\dropdown.cpp
+	"dropdown.hpp"
+	"graphics.hpp"
+
+1778792715 c:\users\kadarkuti\documents\1etem\felev2\bevprog2\beadando3\amoba\include\dropdown.hpp
+	"widget.hpp"
+
+1778792644 c:\users\kadarkuti\documents\1etem\felev2\bevprog2\beadando3\amoba\include\widget.hpp
+	"graphics.hpp"
+
+1776628736 c:\users\kadarkuti\documents\1etem\felev2\bevprog2\beadando3\amoba\include\utils.hpp
+	"graphics.hpp"
+
+1778793591 source:c:\users\kadarkuti\documents\1etem\felev2\bevprog2\beadando3\amoba\src\spinbox.cpp
+	"spinbox.hpp"
+	"graphics.hpp"
+
+1778791350 c:\users\kadarkuti\documents\1etem\felev2\bevprog2\beadando3\amoba\include\spinbox.hpp
+	"graphics.hpp"
+	"widget.hpp"
+
+1776628916 source:c:\users\kadarkuti\documents\1etem\felev2\bevprog2\beadando3\amoba\src\utils.cpp
+	"graphics.hpp"
+	"utils.hpp"
+
+1778791141 source:c:\users\kadarkuti\documents\1etem\felev2\bevprog2\beadando3\amoba\src\widget.cpp
+	"widget.hpp"
+	"application.hpp"
+
+1778792958 c:\users\kadarkuti\documents\1etem\felev2\bevprog2\beadando3\amoba\include\application.hpp
+	"widget.hpp"
+	"dropdown.hpp"
+	"spinbox.hpp"
+	"button.hpp"
+	"statictext.hpp"
+
+1778792985 source:c:\users\kadarkuti\documents\1etem\felev2\bevprog2\beadando3\amoba\src\application.cpp
+	"application.hpp"
+	"graphics.hpp"
+
+1778790729 source:c:\users\kadarkuti\documents\1etem\felev2\bevprog2\beadando3\amoba\src\gamemaster.cpp
+	"gamemaster.hpp"
+
+1778790745 c:\users\kadarkuti\documents\1etem\felev2\bevprog2\beadando3\amoba\include\gamemaster.hpp
+
+1778790983 source:c:\users\kadarkuti\documents\1etem\felev2\bevprog2\beadando3\amoba\src\button.cpp
+	"button.hpp"
+
+1778790975 c:\users\kadarkuti\documents\1etem\felev2\bevprog2\beadando3\amoba\include\button.hpp
+	<functional>
+	"widget.hpp"
+
+1778747247 c:\users\kadarkuti\documents\1etem\felev2\bevprog2\beadando3\amoba\include\statictext.hpp
+	"widget.hpp"
+
+1778792578 source:c:\users\kadarkuti\documents\1etem\felev2\bevprog2\beadando3\amoba\src\statictext.cpp
+	"statictext.hpp"
 
