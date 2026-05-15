@@ -803,9 +803,10 @@
 
 1677889778 c:\users\kadarkuti\documents\1etem\felev2\bevprog2\beadando3\amoba\graphicslib\keytbl.h
 
-1778793369 source:c:\users\kadarkuti\documents\1etem\felev2\bevprog2\beadando3\amoba\main.cpp
+1778853372 source:c:\users\kadarkuti\documents\1etem\felev2\bevprog2\beadando3\amoba\main.cpp
 	"application.hpp"
 	"gamemaster.hpp"
+	<iostream>
 
 1677889778 c:\users\kadarkuti\documents\1etem\felev2\bevprog2\beadando3\amoba\include\graphics.hpp
 	<string>
@@ -840,21 +841,23 @@
 	"widget.hpp"
 	"application.hpp"
 
-1778792958 c:\users\kadarkuti\documents\1etem\felev2\bevprog2\beadando3\amoba\include\application.hpp
+1778830992 c:\users\kadarkuti\documents\1etem\felev2\bevprog2\beadando3\amoba\include\application.hpp
 	"widget.hpp"
 	"dropdown.hpp"
 	"spinbox.hpp"
 	"button.hpp"
 	"statictext.hpp"
+	"rect2.hpp"
 
 1778792985 source:c:\users\kadarkuti\documents\1etem\felev2\bevprog2\beadando3\amoba\src\application.cpp
 	"application.hpp"
 	"graphics.hpp"
 
-1778790729 source:c:\users\kadarkuti\documents\1etem\felev2\bevprog2\beadando3\amoba\src\gamemaster.cpp
+1778853077 source:c:\users\kadarkuti\documents\1etem\felev2\bevprog2\beadando3\amoba\src\gamemaster.cpp
 	"gamemaster.hpp"
 
-1778790745 c:\users\kadarkuti\documents\1etem\felev2\bevprog2\beadando3\amoba\include\gamemaster.hpp
+1778853830 c:\users\kadarkuti\documents\1etem\felev2\bevprog2\beadando3\amoba\include\gamemaster.hpp
+	"amobatile.hpp"
 
 1778790983 source:c:\users\kadarkuti\documents\1etem\felev2\bevprog2\beadando3\amoba\src\button.cpp
 	"button.hpp"
@@ -868,4 +871,16 @@
 
 1778792578 source:c:\users\kadarkuti\documents\1etem\felev2\bevprog2\beadando3\amoba\src\statictext.cpp
 	"statictext.hpp"
+
+1778830861 c:\users\kadarkuti\documents\1etem\felev2\bevprog2\beadando3\amoba\include\rect2.hpp
+	"widget.hpp"
+
+1778832500 source:c:\users\kadarkuti\documents\1etem\felev2\bevprog2\beadando3\amoba\src\rect2.cpp
+	"rect2.hpp"
+
+1778853533 c:\users\kadarkuti\documents\1etem\felev2\bevprog2\beadando3\amoba\include\amobatile.hpp
+	"rect2.hpp"
+
+1778853560 source:c:\users\kadarkuti\documents\1etem\felev2\bevprog2\beadando3\amoba\src\amobatile.cpp
+	"amobatile.hpp"
 

@@ -60,10 +60,12 @@
 		<Unit filename="graphicslib/lib_test.cpp">
 			<Option target="lib_test" />
 		</Unit>
+		<Unit filename="include/amobatile.hpp" />
 		<Unit filename="include/application.hpp" />
 		<Unit filename="include/button.hpp" />
 		<Unit filename="include/dropdown.hpp" />
 		<Unit filename="include/gamemaster.hpp" />
+		<Unit filename="include/rect2.hpp" />
 		<Unit filename="include/spinbox.hpp" />
 		<Unit filename="include/statictext.hpp" />
 		<Unit filename="include/widget.hpp" />
@@ -71,10 +73,12 @@
 			<Option target="Debug" />
 			<Option target="Release" />
 		</Unit>
+		<Unit filename="src/amobatile.cpp" />
 		<Unit filename="src/application.cpp" />
 		<Unit filename="src/button.cpp" />
 		<Unit filename="src/dropdown.cpp" />
 		<Unit filename="src/gamemaster.cpp" />
+		<Unit filename="src/rect2.cpp" />
 		<Unit filename="src/spinbox.cpp" />
 		<Unit filename="src/statictext.cpp" />
 		<Unit filename="src/widget.cpp" />

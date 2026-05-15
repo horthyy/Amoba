@@ -7,6 +7,7 @@
 #include "spinbox.hpp"
 #include "button.hpp"
 #include "statictext.hpp"
+#include "rect2.hpp"
 
 class Application
 {
