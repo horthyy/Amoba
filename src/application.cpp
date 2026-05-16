@@ -21,7 +21,7 @@ void Application::register_widget(Widget* w) {
     _widgets.push_back(w);
 }
 
-void Application::event_loop()
+void Application::run()
 {
     int sel = -1;
     std::string act = "";

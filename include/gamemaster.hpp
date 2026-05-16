@@ -1,7 +1,7 @@
 #ifndef GAMEMASTER_HPP
 #define GAMEMASTER_HPP
 
-#include "amobatile.hpp"
+#include <vector>
 
 class Amoba;
 
@@ -14,6 +14,7 @@ public:
     void clear_tiles();
     void set_length(int);
     int get_length() const;
+    std::vector<std::vector<char>> get_tiles() const;
 
 protected:
     Amoba* _parent;

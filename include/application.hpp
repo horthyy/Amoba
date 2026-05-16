@@ -8,6 +8,8 @@
 #include "button.hpp"
 #include "statictext.hpp"
 #include "rect2.hpp"
+#include "amobatile.hpp"
+#include "amobagrid.hpp"
 
 class Application
 {
@@ -15,7 +17,7 @@ class Application
         Application(int,int,std::string,genv::color bgcolor = BLACK);
         virtual ~Application();
 
-        void event_loop();
+        void run();
         void register_widget(Widget*);
 
         // kulonfele seged fuggvenyek

@@ -1,4 +1,5 @@
 #include "amobatile.hpp"
+#include <iostream>
 using namespace genv;
 using namespace std;
 
@@ -20,6 +21,7 @@ void AmobaTile::handle(genv::event ev)
 
 void AmobaTile::draw() const
 {
+    cout << "AmobaTile::draw()" << endl;
     gout << BLACK << move_to(_x,_y) << box(_sx,_sy) << move_to(_x+2, _y+2) << _color << box(_sx-4, _sy-4)
          << move_to(_x+4, _y+4);
     if (_symbol == 'x')

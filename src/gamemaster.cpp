@@ -1,10 +1,14 @@
 #include "gamemaster.hpp"
+#include "amoba.hpp"
 
-class Amoba;
+using namespace std;
+#include <vector>
+#include <iostream>
 
-GameMaster::GameMaster(Amoba* parent) : _parent(parent)
+
+GameMaster::GameMaster(Amoba* parent) : _parent(parent), _length(15)
 {
-    //ctor
+    clear_tiles();
 }
 
 GameMaster::~GameMaster()
@@ -25,7 +29,22 @@ int GameMaster::get_length() const
 
 void GameMaster::clear_tiles()
 {
-    _tiles.clear(); // EZ VALSZEG ROSSZ !!!!!
+    if (_tiles.size() < _length)
+    {
+    vector<char> uj;
+    for (size_t j=0; j<_length; ++j)
+    {
+        uj.clear();
+        for (size_t i=0; i<_length; ++i)
+        {
+            uj.push_back('e');
+        }
+        _tiles.push_back(uj);
+    }
+    }
+    else
+    {
+    _tiles.clear();
     for (size_t j=0; j<_length; ++j)
     {
         for (size_t i=0; i<_length; ++i)
@@ -33,4 +52,11 @@ void GameMaster::clear_tiles()
             _tiles[j][i] = 'e';
         }
     }
+
+    }
+}
+
+vector<vector<char>> GameMaster::get_tiles() const
+{
+    return _tiles;
 }
