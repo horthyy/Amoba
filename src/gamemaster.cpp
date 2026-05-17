@@ -6,7 +6,7 @@ using namespace std;
 #include <iostream>
 
 
-GameMaster::GameMaster(Amoba* amoba) : _amoba(amoba), _length(15), _moves(0)
+GameMaster::GameMaster(Amoba* amoba) : _amoba(amoba), _length(15), _moves(0), _running(0)
 {
     clear_tiles();
 }
@@ -16,46 +16,32 @@ GameMaster::~GameMaster()
     //dtor
 }
 
+void GameMaster::new_game(size_t new_length)
+{
+    set_length(new_length);
+    _running = 1;
+    _amoba->update_grid();
+}
+
 void GameMaster::set_length(int n)
 {
     _length = n;
     clear_tiles();
 }
 
-int GameMaster::get_length() const
+size_t GameMaster::get_length() const
 {
     return _length;
 }
 
+size_t GameMaster::get_moves() const
+{
+    return _moves;
+}
+
 void GameMaster::clear_tiles()
 {
-    if (_tiles.size() < _length)
-    {
-    vector<char> uj;
-    for (size_t j=0; j<_length; ++j)
-    {
-        uj.clear();
-        for (size_t i=0; i<_length; ++i)
-        {
-            uj.push_back('e');
-        }
-        _tiles.push_back(uj);
-    }
-    }
-    else
-    {
-    _tiles.clear();
-    for (size_t j=0; j<_length; ++j)
-    {
-        for (size_t i=0; i<_length; ++i)
-        {
-            _tiles[j][i] = 'e';
-        }
-    }
-
-    }
-
-    _amoba->update_grid();
+    _tiles = vector<vector<char>>(_length, vector<char>(_length, 'e'));
 }
 
 vector<vector<char>> GameMaster::get_tiles() const
@@ -78,11 +64,14 @@ void GameMaster::debug_print()
         }
     }
 
+
 // DEBUG END
 
-void GameMaster::test_move(int j, int i)
+void GameMaster::next_move(int j, int i)
 {
+    if (_running == 0) {return;}
 
+    // lépés elhelyezése teszt
     if (_tiles[j][i] == 'e')
     {
         // eldönti hogy x vagy o legyen lerakva
@@ -104,11 +93,30 @@ void GameMaster::test_move(int j, int i)
         // DEBUG
         //cout << "teszt eredmenye: " << endl << "testfor_x = " << testfor_x << ", " << endl << "testfor_o = " << testfor_o << endl;
 
-        if      (testfor_x == 'x') {cout << "x nyert" << endl;}
-        else if (testfor_o == 'o') {cout << "o nyert" << endl;}
+        if (testfor_x == 'x') // X WON
+        {
+            cout << "x nyert" << endl;
+            _running = 0;
+            _amoba->game_over('x');
+            return;
+        }
+        else if (testfor_o == 'o') // O WON
+        {
+            cout << "o nyert" << endl;
+            _running = 0;
+            _amoba->game_over('o');
+            return;
+        }
+
+        // pálya betelésének esete
+        if (_moves == _length*_length) // DONTETLEN
+        {
+            cout << "dontetlen." << endl;
+            _amoba->game_over('e');
+            return;
+        }
 
     }
-    cout << "GameMaster: moves = " << _moves << endl;
 }
 
 char GameMaster::check_char(char s) const

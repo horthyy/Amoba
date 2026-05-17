@@ -62,7 +62,6 @@
 		</Unit>
 		<Unit filename="include/amoba.hpp" />
 		<Unit filename="include/amobagrid.hpp" />
-		<Unit filename="include/amobatile.hpp" />
 		<Unit filename="include/application.hpp" />
 		<Unit filename="include/button.hpp" />
 		<Unit filename="include/dropdown.hpp" />
@@ -77,7 +76,6 @@
 		</Unit>
 		<Unit filename="src/amoba.cpp" />
 		<Unit filename="src/amobagrid.cpp" />
-		<Unit filename="src/amobatile.cpp" />
 		<Unit filename="src/application.cpp" />
 		<Unit filename="src/button.cpp" />
 		<Unit filename="src/dropdown.cpp" />

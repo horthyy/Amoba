@@ -30,7 +30,7 @@ void AmobaGrid::handle(genv::event ev)
                 size_t i = (ev.pos_x - _x)/w;
                 size_t j = (ev.pos_y - _y)/w;
                 //cout << j << ". sor, " << i << ". osz" << endl;
-                _gmptr->test_move(j,i);
+                _gmptr->next_move(j,i);
 
             }
         }
@@ -67,7 +67,6 @@ void AmobaGrid::update_tiles(vector<vector<char>> v)
 {
     if (v.size() != _amobatiles.size()) {cout << "_amobatiles.size() updated from " << _amobatiles.size() << " to " << _amobatiles.size() << endl;}
     _amobatiles = v;
-    //_sx = v.size()*20; _sy = v.size()*20;
 }
 
 void AmobaGrid::set_symbol(size_t i, size_t j, char symbol)

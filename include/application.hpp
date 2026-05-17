@@ -26,9 +26,14 @@ class Application
 
         virtual void action(genv::event) = 0;
 
+        size_t get_width() const;
+        size_t get_height() const;
+        void set_background(genv::color);
+        genv::color get_background() const;
+
     protected:
         std::vector<Widget*> _widgets;
-        int _width, _height;
+        size_t _width, _height;
         std::string _title;
         genv::color _bgcolor;
 };

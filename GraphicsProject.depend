@@ -817,7 +817,7 @@
 1778792715 c:\users\kadarkuti\documents\1etem\felev2\bevprog2\beadando3\amoba\include\dropdown.hpp
 	"widget.hpp"
 
-1778792644 c:\users\kadarkuti\documents\1etem\felev2\bevprog2\beadando3\amoba\include\widget.hpp
+1779044485 c:\users\kadarkuti\documents\1etem\felev2\bevprog2\beadando3\amoba\include\widget.hpp
 	"graphics.hpp"
 
 1776628736 c:\users\kadarkuti\documents\1etem\felev2\bevprog2\beadando3\amoba\include\utils.hpp
@@ -835,11 +835,11 @@
 	"graphics.hpp"
 	"utils.hpp"
 
-1778791141 source:c:\users\kadarkuti\documents\1etem\felev2\bevprog2\beadando3\amoba\src\widget.cpp
+1779044517 source:c:\users\kadarkuti\documents\1etem\felev2\bevprog2\beadando3\amoba\src\widget.cpp
 	"widget.hpp"
 	"application.hpp"
 
-1779014942 c:\users\kadarkuti\documents\1etem\felev2\bevprog2\beadando3\amoba\include\application.hpp
+1779035805 c:\users\kadarkuti\documents\1etem\felev2\bevprog2\beadando3\amoba\include\application.hpp
 	"widget.hpp"
 	"dropdown.hpp"
 	"spinbox.hpp"
@@ -848,36 +848,36 @@
 	"rect2.hpp"
 	"amobagrid.hpp"
 
-1779014915 source:c:\users\kadarkuti\documents\1etem\felev2\bevprog2\beadando3\amoba\src\application.cpp
+1779044574 source:c:\users\kadarkuti\documents\1etem\felev2\bevprog2\beadando3\amoba\src\application.cpp
 	"application.hpp"
 	"graphics.hpp"
 
-1779031575 source:c:\users\kadarkuti\documents\1etem\felev2\bevprog2\beadando3\amoba\src\gamemaster.cpp
+1779044631 source:c:\users\kadarkuti\documents\1etem\felev2\bevprog2\beadando3\amoba\src\gamemaster.cpp
 	"gamemaster.hpp"
 	"amoba.hpp"
 	<vector>
 	<iostream>
 
-1779031261 c:\users\kadarkuti\documents\1etem\felev2\bevprog2\beadando3\amoba\include\gamemaster.hpp
+1779044870 c:\users\kadarkuti\documents\1etem\felev2\bevprog2\beadando3\amoba\include\gamemaster.hpp
 	<vector>
 
-1778790983 source:c:\users\kadarkuti\documents\1etem\felev2\bevprog2\beadando3\amoba\src\button.cpp
+1779040998 source:c:\users\kadarkuti\documents\1etem\felev2\bevprog2\beadando3\amoba\src\button.cpp
 	"button.hpp"
 
 1778790975 c:\users\kadarkuti\documents\1etem\felev2\bevprog2\beadando3\amoba\include\button.hpp
 	<functional>
 	"widget.hpp"
 
-1778747247 c:\users\kadarkuti\documents\1etem\felev2\bevprog2\beadando3\amoba\include\statictext.hpp
+1779040528 c:\users\kadarkuti\documents\1etem\felev2\bevprog2\beadando3\amoba\include\statictext.hpp
 	"widget.hpp"
 
-1778792578 source:c:\users\kadarkuti\documents\1etem\felev2\bevprog2\beadando3\amoba\src\statictext.cpp
+1779044557 source:c:\users\kadarkuti\documents\1etem\felev2\bevprog2\beadando3\amoba\src\statictext.cpp
 	"statictext.hpp"
 
 1778830861 c:\users\kadarkuti\documents\1etem\felev2\bevprog2\beadando3\amoba\include\rect2.hpp
 	"widget.hpp"
 
-1778832500 source:c:\users\kadarkuti\documents\1etem\felev2\bevprog2\beadando3\amoba\src\rect2.cpp
+1779044552 source:c:\users\kadarkuti\documents\1etem\felev2\bevprog2\beadando3\amoba\src\rect2.cpp
 	"rect2.hpp"
 
 1778853533 c:\users\kadarkuti\documents\1etem\felev2\bevprog2\beadando3\amoba\include\amobatile.hpp
@@ -891,18 +891,18 @@
 	"widget.hpp"
 	<vector>
 
-1779031591 source:c:\users\kadarkuti\documents\1etem\felev2\bevprog2\beadando3\amoba\src\amobagrid.cpp
+1779042092 source:c:\users\kadarkuti\documents\1etem\felev2\bevprog2\beadando3\amoba\src\amobagrid.cpp
 	"amobagrid.hpp"
 	"gamemaster.hpp"
 	<iostream>
 	<vector>
 
-1779031175 c:\users\kadarkuti\documents\1etem\felev2\bevprog2\beadando3\amoba\include\amoba.hpp
+1779043074 c:\users\kadarkuti\documents\1etem\felev2\bevprog2\beadando3\amoba\include\amoba.hpp
 	"application.hpp"
 	"gamemaster.hpp"
 	<vector>
 
-1779028142 source:c:\users\kadarkuti\documents\1etem\felev2\bevprog2\beadando3\amoba\src\amoba.cpp
+1779044864 source:c:\users\kadarkuti\documents\1etem\felev2\bevprog2\beadando3\amoba\src\amoba.cpp
 	"amoba.hpp"
 	"gamemaster.hpp"
 	<iostream>

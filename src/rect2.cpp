@@ -4,7 +4,7 @@ using namespace genv;
 Rect2::Rect2(Application* parent, int x, int y, int sx, int sy, color clr)
                 : Widget(parent, x, y, sx, sy), _color(clr)
 {
-    //ctor
+    make_unselectable();
 }
 
 Rect2::~Rect2()

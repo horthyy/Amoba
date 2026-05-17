@@ -37,7 +37,7 @@ void Application::run()
 
                 if(sel != -1)
                 {
-                    if(!_widgets[sel]->is_inside(ev.pos_x, ev.pos_y))
+                    if(!_widgets[sel]->is_inside(ev.pos_x, ev.pos_y) || !_widgets[sel]->is_visible())
                     {
 
                         _widgets[sel]->deselect();
@@ -50,7 +50,7 @@ void Application::run()
                     for(int i=0;i<_widgets.size();++i)
                     {
 
-                        if (_widgets[i]->is_inside(ev.pos_x, ev.pos_y))
+                        if (_widgets[i]->is_inside(ev.pos_x, ev.pos_y) && _widgets[i]->is_visible() && _widgets[i]->is_enabled())
                         {
                             sel = i;
                             _widgets[i]->select();
@@ -68,14 +68,18 @@ void Application::run()
         // ha van kiválasztott elem akkor kezeli azt az event alapján
         if (sel != -1)
         {
-            _widgets[sel]->handle(ev);
+            if (_widgets[sel]->is_visible())
+                {_widgets[sel]->handle(ev);}
+            else
+                {_widgets[sel]->deselect();
+                sel = -1;}
         }
 
         // elemek kirajzolasa
         background();
         for (int i = 0; i<_widgets.size(); ++i)
         {
-            _widgets[i]->draw();
+            if(_widgets[i]->is_visible()) {_widgets[i]->draw();}
         }
 
 
@@ -96,4 +100,24 @@ void Application::background() const
 void Application::background(color CLR) const
 {
     gout << CLR << move_to(0,0) << box(_width-1,_height-1);
+}
+
+size_t Application::get_width() const
+{
+    return _width;
+}
+
+size_t Application::get_height() const
+{
+    return _height;
+}
+
+void Application::set_background(color c)
+{
+    _bgcolor = c;
+}
+
+color Application::get_background() const
+{
+    return _bgcolor;
 }

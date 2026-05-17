@@ -20,8 +20,30 @@ class Widget
         virtual void on_selection();
         virtual void on_deselection();
 
+        bool is_visible() const; // visibility getter
+        void show();
+        void hide();
+        void toggle();
+
+        bool is_enabled() const;
+        void make_unselectable();
+        void make_selectable();
+
     protected:
         int _x, _y, _sx, _sy;
+
+        bool _visible;
+        // True value means it will be drawn and selectable if '_enabled == 1'.
+        // Otherwise not drawn and not selectable.
+
+
+        bool _enabled;
+        // True value means it is selectable if '_visible == 1'.
+        // False means not selectable.
+        // Set to True in all Widgets by default.
+        // If the widget is designed not to be interactable, this
+        // bit needs to be set manually to False at initialization.
+
         bool _selected = 0;
         Application* _parent;
 

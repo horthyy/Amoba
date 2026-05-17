@@ -5,10 +5,11 @@ using namespace genv;
 using namespace std;
 
 StaticText::StaticText(Application* parent, int x, int y, int sx, int sy, string text,
-            string font /* = LiberationMono_Regular */, int font_size /* = 11 */)
-            : Widget(parent,x,y,sx,sy), _text(text), _font(font), _font_size(font_size)
+            color pcolor /* = BLACK */, size_t font_size /* = 20 */,
+            string font /* = LiberationMono_Regular */)
+            : Widget(parent,x,y,sx,sy), _text(text), _color(pcolor), _font(font), _font_size(font_size)
 {
-
+    make_unselectable();
 }
 
 
@@ -27,7 +28,7 @@ void StaticText::draw() const
 {
     gout.load_font(_font, _font_size);
     gout << move_to(_x,_y) << WHITE << box(_sx,_sy);
-    gout << move_to(_x+_sx-gout.twidth(_text), _y + (_sy -gout.cascent() - gout.cdescent())/2) << BLACK << text(_text);
+    gout << move_to(_x+(_sx-gout.twidth(_text))/2, _y + (_sy -gout.cascent() - gout.cdescent())/2) << _color << text(_text);
 }
 
 void StaticText::set_text(string text)

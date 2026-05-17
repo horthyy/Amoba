@@ -7,7 +7,10 @@
 class StaticText : public Widget
 {
     public:
-        StaticText(Application*, int, int, int, int, std::string, std::string font = "Fonts/LiberationMono-Regular.ttf", int font_size=11);
+        StaticText(Application*, int, int, int, int, std::string,
+                   genv::color pcolor = genv::color(0,0,0),
+                   size_t font_size=20,
+                   std::string font = "Fonts/LiberationMono-Regular.ttf");
         virtual ~StaticText();
 
         void handle(genv::event) override;
@@ -20,6 +23,7 @@ class StaticText : public Widget
         std::string _text;
         std::string _font;
         int _font_size;
+        genv::color _color;
 };
 
 #endif // STATICTEXT_HPP

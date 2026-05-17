@@ -19,6 +19,14 @@ Ha betelik a pálya, és senki nem nyert az utolsó lépésben sem, akkor dönte
 ==============================
 */
 
+enum State
+{
+    st_mainmenu,
+    st_gameinit,
+    st_ingame,
+    st_gameover
+};
+
 class Amoba : public Application
 {
 public:
@@ -28,36 +36,48 @@ public:
     virtual void action(genv::event);
 
     void update_grid();
-    void test_move(int,int);
+    void game_over(char);
+    void change_state_to(State);
+    void btn_handler(std::string);
+
 
 protected:
-    // statictext, gombok meg egyeb cuccok mert MINDENT widgetekkel kell kirajzolni!!!!
+    // ============= GAME VARIABLES ==============
 
+    // ------ Rules ------
     GameMaster *_gamemaster;
 
+    // ------ State ------
+    State _state;
+
+
+    // ========== GUI ELEMENTS (WIDGETS) =========
+
+    // ------ Interactive Menu Gui Elements ------
     // option selector widgets
     Dropdown *_gamemode_dropdown;
     Spinbox *_size_spinbox;
 
     // menu buttons
-    Button  *_start_btn,      // main menu, new game
-            *_restart_btn, // game over menu, new game
-            *_backtomenu_btn;    // game over menu, go back to main menu
+    Button  *_btn_start,         // main menu, new game
+            *_btn_restart,       // game over menu, new game
+            *_btn_backtomenu;    // game over menu, go back to main menu
 
+    // game-specific tiling widget
+    AmobaGrid *_grid;
 
     // ------ Static Gui Elements ------
     // text elements
-    StaticText *_title_txt, // main menu, game title
-               *_spinbox_txt, // main menu, label above '_size_spinbox'
-               *_dropdown_txt; // main menu, label above '_gamemode_dropdown'
+    StaticText *_title_label,    // main menu, game title
+               *_size_label,     // main menu, label above '_size_spinbox'
+               *_gamemode_label, // main menu, label above '_gamemode_dropdown'
+               *_options_label,  // main menu, label above selector widgets
+               *_popup_label; // game over menu, label in popup window
+
     // background stuff
-    Rect2 *_title_bg, // main menu, background box
-          *_gameover_bg; // game over popup window background
+    Rect2 *_popup_window;  // game over popup window
 
-    // game-specific tiling grid widget
-    AmobaGrid *_grid;
-
-
+    std::vector<genv::color> _bg_color_list;
 };
 
 #endif // AMOBA_HPP
