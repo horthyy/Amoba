@@ -96,7 +96,10 @@ void Amoba::change_state_to(State st)
         _popup_label->hide();
         _popup_window->hide();
 
-        _gamemaster->new_game(_size_spinbox->get_value());
+        _gamemaster->new_game(
+                              _size_spinbox->get_value(),
+                              (_gamemode_dropdown->get_value() == "Player vs Computer" )
+                            );
 
         change_state_to(st_ingame);
         cout << "changed state to GAMEINIT" << endl;

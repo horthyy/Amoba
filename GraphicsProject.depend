@@ -852,13 +852,13 @@
 	"application.hpp"
 	"graphics.hpp"
 
-1779044631 source:c:\users\kadarkuti\documents\1etem\felev2\bevprog2\beadando3\amoba\src\gamemaster.cpp
+1779054813 source:c:\users\kadarkuti\documents\1etem\felev2\bevprog2\beadando3\amoba\src\gamemaster.cpp
 	"gamemaster.hpp"
 	"amoba.hpp"
 	<vector>
 	<iostream>
 
-1779044870 c:\users\kadarkuti\documents\1etem\felev2\bevprog2\beadando3\amoba\include\gamemaster.hpp
+1779052559 c:\users\kadarkuti\documents\1etem\felev2\bevprog2\beadando3\amoba\include\gamemaster.hpp
 	<vector>
 
 1779040998 source:c:\users\kadarkuti\documents\1etem\felev2\bevprog2\beadando3\amoba\src\button.cpp
@@ -897,12 +897,12 @@
 	<iostream>
 	<vector>
 
-1779043074 c:\users\kadarkuti\documents\1etem\felev2\bevprog2\beadando3\amoba\include\amoba.hpp
+1779046341 c:\users\kadarkuti\documents\1etem\felev2\bevprog2\beadando3\amoba\include\amoba.hpp
 	"application.hpp"
 	"gamemaster.hpp"
 	<vector>
 
-1779044864 source:c:\users\kadarkuti\documents\1etem\felev2\bevprog2\beadando3\amoba\src\amoba.cpp
+1779047628 source:c:\users\kadarkuti\documents\1etem\felev2\bevprog2\beadando3\amoba\src\amoba.cpp
 	"amoba.hpp"
 	"gamemaster.hpp"
 	<iostream>

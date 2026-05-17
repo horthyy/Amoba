@@ -13,7 +13,7 @@ Amõba játék megvalósítása:
 - Játék: a játékszabályokat a 'GameMaster' singleton class vezérli, ami 'Amoba' mezõjeként szerepel.
 
 Player1 jele X, Player2 jele O.
-Az nyer, aki először rak le a saját szimbólumából 5 darabot egymás mellé sorban vagy oszlopban.
+Az nyer, aki először rak le a saját szimbólumából 5 darabot egymás mellé sorban, oszlopban vagy átlósan.
 Ha betelik a pálya, és senki nem nyert az utolsó lépésben sem, akkor döntetlen a játék.
 
 ==============================
