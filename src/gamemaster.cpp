@@ -3,7 +3,6 @@
 
 using namespace std;
 #include <vector>
-#include <iostream>
 
 
 GameMaster::GameMaster(Amoba* amoba) : _amoba(amoba), _length(15), _moves(0), _running(0), _player2_com(0)
@@ -29,7 +28,7 @@ void GameMaster::new_game(size_t new_length, bool is_player2_com)
     _player2_com = is_player2_com;
     _amoba->update_grid();
 
-    cout << "GameMaster: new game, \n - tiles = " << _length << ", player2 is com? = " << _player2_com << endl;
+
 }
 
 void GameMaster::set_length(int n)
@@ -59,23 +58,6 @@ vector<vector<char>> GameMaster::get_tiles() const
 }
 
 
-// DEBUG
-void GameMaster::debug_print()
-    {
-        cout << "_gamemaster._length = " << _length << endl;
-        for (size_t i=0; i<_length; ++i)
-        {
-            for (size_t j=0; j<_length; ++j)
-            {
-                cout << _tiles[i][j] << " ";
-            }
-            cout << endl;
-        }
-    }
-
-
-// DEBUG END
-
 void GameMaster::next_move(int j, int i)
 {
     if (_running == 0) {return;}
@@ -102,19 +84,15 @@ void GameMaster::next_move(int j, int i)
         char testfor_x = check_char('x');
         char testfor_o = check_char('o');
 
-        // DEBUG
-        //cout << "teszt eredmenye: " << endl << "testfor_x = " << testfor_x << ", " << endl << "testfor_o = " << testfor_o << endl;
 
         if (testfor_x == 'x') // X WON
         {
-            cout << "x nyert" << endl;
             _running = 0;
             _amoba->game_over('x');
             return;
         }
         else if (testfor_o == 'o') // O WON
         {
-            cout << "o nyert" << endl;
             _running = 0;
             _amoba->game_over('o');
             return;
@@ -123,7 +101,6 @@ void GameMaster::next_move(int j, int i)
         // pálya betelésének esete
         if (_moves == _length*_length) // DONTETLEN
         {
-            cout << "dontetlen." << endl;
             _amoba->game_over('e');
             return;
         }
@@ -235,14 +212,6 @@ vector<size_t> GameMaster::generate_next_com_move() const
 
     vector<vector<size_t>> nearby = get_nearby_empty_tiles();
 
-    // DEBUG PRINT NEARBY
-    cout << "DEBUG PRINT NEARBY: " << endl;
-    for (size_t i=0; i<nearby.size(); ++i)
-    {
-        cout << "(" << nearby[i][0] << ", " << nearby[i][1] << "). " << endl;
-    }
-    //
-
     vector<size_t> best_move = {0, 0};
     int best_score = -9999999999;
     int x_score, o_score, total;
@@ -269,9 +238,10 @@ vector<vector<size_t>> GameMaster::get_nearby_empty_tiles() const
     // get 5x5 slice of board centered at the last move point (_last_x, _last_y).
     vector<vector<size_t>> v;
     int x, y;
-    for (int i=-2; i<=2; ++i)
+    int depth = _length/2 +1;
+    for (int i=-depth; i<=depth; ++i)
     {
-        for (int j=-2; j<=2; ++j)
+        for (int j=-depth; j<=depth; ++j)
         {
             x = _last_x + i;
             y = _last_y + j;

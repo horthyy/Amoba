@@ -7,7 +7,7 @@
 
 
 /*
-==============================
+=========== LEÍRÁS ===========
 Amõba játék megvalósítása:
 - GUI: kirajzolást az 'Amoba' class végzi, ami egy 'Application' leszármazott.
 - Játék: a játékszabályokat a 'GameMaster' singleton class vezérli, ami 'Amoba' mezõjeként szerepel.
@@ -15,6 +15,9 @@ Amõba játék megvalósítása:
 Player1 jele X, Player2 jele O.
 Az nyer, aki először rak le a saját szimbólumából 5 darabot egymás mellé sorban, oszlopban vagy átlósan.
 Ha betelik a pálya, és senki nem nyert az utolsó lépésben sem, akkor döntetlen a játék.
+
+Lehet játszani gépi játékos ellen is, ez a főmenüben állítható.
+Szintén állítható a pálya mérete, 15x15 és 30x30 között.
 
 ==============================
 */

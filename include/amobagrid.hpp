@@ -22,10 +22,6 @@ class AmobaGrid : public Widget
 
         void fill_empty(int);
 
-        // DEBUG
-        void debug_print();
-        // DEBUG
-
     protected:
         std::vector<std::vector<char>> _amobatiles;
         GameMaster *_gmptr; // ez az egyetlen játék-specifikus widget, és tud kommunikálni a GameMaster-rel.

@@ -1,8 +1,6 @@
 #include "amoba.hpp"
 #include "gamemaster.hpp"
 
-#include <iostream>
-
 #include <vector>
 using namespace std;
 using namespace genv;
@@ -51,14 +49,7 @@ void Amoba::update_grid()
 
 void Amoba::action(event ev)
 {
-    // DEBUG
-    if (ev.keycode == 'p')
-    {
-        cout << "DEBUG (p): PRINT" << endl;
-        cout << "GameMaster data:" << endl; _gamemaster->debug_print();
-        cout << "AmobaGrid data:" << endl; _grid->debug_print();
 
-    }
 }
 
 void Amoba::change_state_to(State st)
@@ -80,7 +71,7 @@ void Amoba::change_state_to(State st)
         _options_label->show();
         _popup_label->hide();
         _popup_window->hide();
-        cout << "changed state to MAINMENU" << endl;
+
         break;
     case st_gameinit:
         _gamemode_dropdown->hide();
@@ -102,10 +93,10 @@ void Amoba::change_state_to(State st)
                             );
 
         change_state_to(st_ingame);
-        cout << "changed state to GAMEINIT" << endl;
+
         break;
     case st_ingame:
-        cout << "changed state to INGAME" << endl;
+
         break;
     case st_gameover:
         _gamemode_dropdown->hide();
@@ -122,14 +113,14 @@ void Amoba::change_state_to(State st)
 
         _popup_window->set_color(_bg_color_list[_gamemaster->get_moves()%_bg_color_list.size()]);
         _popup_window->show();
-        cout << "changed state to GAMEOVER" << endl;
+
         break;
     }
 }
 
 void Amoba::btn_handler(string btn)
 {
-    //cout << "button pressed. id = " << btn << endl;
+
     if (btn == "Start")
     {
         change_state_to(st_gameinit);

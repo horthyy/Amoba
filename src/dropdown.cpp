@@ -19,7 +19,7 @@ bool Dropdown::is_inside(int mx, int my)
     else
     {
         int height;
-        //cout << "va " << _values.size()%_max_height << " es " << _values.size()%_max_height<<endl;
+
         if (_page_index == _number_of_pages && _values.size()%_max_height)
             {height = _sy * ( 1 + _values.size()%_max_height);}
         else

@@ -32,11 +32,6 @@ public:
     std::vector<std::vector<size_t>> get_nearby_empty_tiles() const;
     int evaluation(size_t,size_t, char) const;
 
-    // DEBUG //
-    void debug_print();
-
-    // DEBUG //
-
 protected:
     Amoba* _amoba;
     std::vector<std::vector<char>> _tiles;
