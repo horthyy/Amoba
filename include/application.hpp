@@ -8,7 +8,6 @@
 #include "button.hpp"
 #include "statictext.hpp"
 #include "rect2.hpp"
-#include "amobatile.hpp"
 #include "amobagrid.hpp"
 
 class Application
@@ -24,6 +23,8 @@ class Application
         void upd() const;
         void background() const;
         void background(genv::color) const;
+
+        virtual void action(genv::event) = 0;
 
     protected:
         std::vector<Widget*> _widgets;

@@ -12,6 +12,10 @@ Amõba játék megvalósítása:
 - GUI: kirajzolást az 'Amoba' class végzi, ami egy 'Application' leszármazott.
 - Játék: a játékszabályokat a 'GameMaster' singleton class vezérli, ami 'Amoba' mezõjeként szerepel.
 
+Player1 jele X, Player2 jele O.
+Az nyer, aki először rak le a saját szimbólumából 5 darabot egymás mellé sorban vagy oszlopban.
+Ha betelik a pálya, és senki nem nyert az utolsó lépésben sem, akkor döntetlen a játék.
+
 ==============================
 */
 
@@ -21,7 +25,10 @@ public:
     Amoba();
     virtual ~Amoba();
 
-    void set_grid();
+    virtual void action(genv::event);
+
+    void update_grid();
+    void test_move(int,int);
 
 protected:
     // statictext, gombok meg egyeb cuccok mert MINDENT widgetekkel kell kirajzolni!!!!

@@ -7,6 +7,7 @@ Application::Application(int width, int height, std::string title, color bgcolor
 {
     gout.open(_width, _height);
     gout.set_title(title);
+    background();
 }
 
 Application::~Application()
@@ -24,7 +25,6 @@ void Application::register_widget(Widget* w) {
 void Application::run()
 {
     int sel = -1;
-    std::string act = "";
     event ev;
     while(gin >> ev && ev.keycode != key_escape)
     {
@@ -64,6 +64,7 @@ void Application::run()
             }
         }
 
+        action(ev);
         // ha van kiválasztott elem akkor kezeli azt az event alapján
         if (sel != -1)
         {

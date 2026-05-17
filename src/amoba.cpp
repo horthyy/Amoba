@@ -5,6 +5,7 @@
 
 #include <vector>
 using namespace std;
+using namespace genv;
 
 Amoba::Amoba() : Application(640, 640, "Amoba")
 {
@@ -17,7 +18,7 @@ Amoba::Amoba() : Application(640, 640, "Amoba")
     //_restart_btn = new Button(this, 300, 400, 100, 40, "New Game", [](){});
     //_backtomenu_btn = new Button(this, 300, 500, 100, 40, "Back to Menu", [](){});
 
-    _grid = new AmobaGrid(this, 20, 20);
+    _grid = new AmobaGrid(this, 20, 20, _gamemaster);
 
 
 }
@@ -27,7 +28,23 @@ Amoba::~Amoba()
     //dtor
 }
 
-void Amoba::set_grid()
+void Amoba::update_grid()
 {
+    _grid->update_tiles(_gamemaster->get_tiles());
+}
 
+void Amoba::action(event ev)
+{
+    // DEBUG
+    if (ev.keycode == 'p')
+    {
+        cout << "DEBUG (p): PRINT" << endl;
+        cout << "GameMaster data:" << endl; _gamemaster->debug_print();
+        cout << "AmobaGrid data:" << endl; _grid->debug_print();
+
+    } else if (ev.keycode == key_space)
+    {
+        update_grid();
+        cout << "DEBUG (space): update_grid() called." << endl;
+    }
 }
