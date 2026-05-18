@@ -10,6 +10,7 @@
 =========== LEÍRÁS ===========
 Amõba játék megvalósítása:
 - GUI: kirajzolást az 'Amoba' class végzi, ami egy 'Application' leszármazott.
+  Ez eltárolja/kezeli a Widgeteket, és a konkrét képernyőre rajzolást kizárólag a Widgetek végzik.
 - Játék: a játékszabályokat a 'GameMaster' singleton class vezérli, ami 'Amoba' mezõjeként szerepel.
 
 Player1 jele X, Player2 jele O.
